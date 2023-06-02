@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes omdb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Search Movie</h1>
+        </div>
+        <form id="formularioPesquisa">
+            <input type="text" id="campoPesquisa" placeholder="Digite o nome do filme Ex.. Matrix">
+            <button type="submit">Search</button>
+            <span id="mensagemErro" style="color: red;"></span>
+        </form>
+        
+    </header>
+    <main>
+
+        <div class="search">
+            <div class="movie">
+                <div class="img">
+                    <img id="imagemFilme" src="" alt="Imagem do Filme">
+                </div>
+                <div class="legend-film">
+                    <h2 id="meuTexto"> </h2>
+                    <p id="director"></p>
+                    <p id="year"></p>
+                    <p id="plot"></p>
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <script>
+        function consumirEndpoint(filmePesquisado) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost:8080", true);
+            xhr.setRequestHeader("filme", filmePesquisado);
+            xhr.setRequestHeader("isInterface", true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    console.log(response); // Exibe a resposta no console
+
+                    if (response.Response === "True") {
+                        var title = response.Title;
+                        var posterUrl = response.Poster;
+                        var director = response.Director;
+                        var year = response.Year;
+                        var plot = response.Plot;
+
+
+                        document.getElementById("imagemFilme").src = posterUrl;
+                        document.getElementById("meuTexto").textContent = title;
+                        document.getElementById("director").textContent = "Diretor: " + director;
+                        document.getElementById("year").textContent = "Ano de Lançamento: " + year;
+                        document.getElementById("plot").textContent = "Sinopse: " + plot;
+                        document.getElementById("mensagemErro").textContent = "";
+                        document.querySelector(".search").style.display = "flex";
+
+                    } else {
+                        document.getElementById("meuTexto").textContent = "";
+                        document.getElementById("imagemFilme").src = "";
+                        document.getElementById("director").textContent = "";
+                        document.getElementById("year").textContent = "";
+                        document.getElementById("plot").textContent = "";
+                        document.getElementById("mensagemErro").textContent = "Filme não encontrado.";
+                    }
+                } else if (xhr.readyState === 4) {
+                    document.getElementById("meuTexto").textContent = "";
+                    document.getElementById("imagemFilme").src = "";
+                    document.getElementById("director").textContent = "";
+                    document.getElementById("year").textContent = "";
+                    document.getElementById("plot").textContent = "";
+                    document.getElementById("mensagemErro").textContent = "Erro na requisição.";
+                }
+            };
+
+            xhr.onerror = function () {
+                document.getElementById("meuTexto").textContent = "";
+                document.getElementById("imagemFilme").src = "";
+                document.getElementById("director").textContent = "";
+                document.getElementById("year").textContent = "";
+                document.getElementById("plot").textContent = "";
+                document.getElementById("mensagemErro").textContent = "Erro na requisição AJAX.";
+            };
+
+            xhr.send();
+        }
+
+        document.getElementById("formularioPesquisa").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            var filmePesquisado = document.getElementById("campoPesquisa").value;
+
+            consumirEndpoint(filmePesquisado);
+        });
+    </script>
+</body>
+
+</html>
